@@ -881,8 +881,13 @@ function ghApiUrl(){
 }
 
 async function ghFetchRemote(){
-  const res = await fetch(ghApiUrl(), {
-    headers: { 'Authorization': `token ${ghConfig.token}`, 'Accept': 'application/vnd.github+json' }
+  const res = await fetch(`${ghApiUrl()}?_=${Date.now()}`, {
+    cache: 'no-store',
+    headers: {
+      'Authorization': `token ${ghConfig.token}`,
+      'Accept': 'application/vnd.github+json',
+      'If-None-Match': ''
+    }
   });
   if(res.status === 404){ ghFileSha = null; return null; }
   if(!res.ok) throw new Error(`status ${res.status}`);
@@ -1054,3 +1059,4 @@ document.getElementById('importBackupFile').addEventListener('change', (e)=>{
 </script>
 </body>
 </html>
+
