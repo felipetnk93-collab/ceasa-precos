@@ -68,8 +68,6 @@
   }
   .season-link:hover { background: var(--accent-soft); }
 </style>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/tesseract.js@5.0.4/dist/tesseract.min.js"></script>
 </head>
 <body>
 <div class="wrap">
@@ -105,26 +103,11 @@
   </div>
 
   <div class="card">
-    <h2>Colar tabela</h2>
-    <p class="sub" style="margin:0 0 10px;">CEAGESP: pode selecionar a página inteira e colar (data/categoria automáticas). Campinas: cole o texto extraído do PDF de cotação (a data é detectada automaticamente também).</p>
-    <div class="row" style="grid-template-columns: 160px 1fr 160px;">
-      <div><label>Praça</label>
-        <select id="pracaSel">
-          <option value="sorocaba">Sorocaba (CEAGESP)</option>
-          <option value="campinas">Campinas</option>
-        </select>
-      </div>
+    <h2>Colar tabela da CEAGESP</h2>
+    <p class="sub" style="margin:0 0 10px;">Pode selecionar a página inteira (Ctrl+A) e colar — o resto do texto é ignorado. Data e categoria são detectadas automaticamente.</p>
+    <div class="row">
       <div><label>Categoria (auto)</label><input id="bulkCategoria" placeholder="Preenchido ao colar" /></div>
       <div><label>Data (auto)</label><input id="bulkData" type="date" /></div>
-    </div>
-
-    <div id="campinasPdfRow" style="display:none; margin-bottom:10px;">
-      <label>PDF de cotação (Campinas)</label>
-      <div class="actions" style="margin-top:4px;">
-        <input type="file" id="campinasPdfInput" accept="application/pdf">
-        <button class="ghost" id="campinasPdfBtn">Ler PDF e preencher</button>
-      </div>
-      <p class="status" id="campinasPdfStatus" style="margin-top:6px;"></p>
     </div>
 
     <div class="row">
@@ -501,131 +484,28 @@ function parseBulkTable(text){
   return rows;
 }
 
-function extractDateCampinas(text){
-  const m = text.match(/Cota[çc][ãa]o\s+Realizada\s+em:?\s*(\d{2})\/(\d{2})\/(\d{4})/i);
-  if(m) return `${m[3]}-${m[2]}-${m[1]}`;
-  return null;
-}
-
-// Campinas: linhas terminam com um código de mercado (ME/MI/MA...) e usam ponto decimal.
-// Ex: "AMENDOIM - KG COM CASCA 6.50 7.00 8.00 ME"
-function parseCampinasTable(text){
-  const rawLines = text.split(/\r?\n/).map(l=>l.trim()).filter(l=>l.length);
-  const rows = [];
-  const priceToken = /^\d+([.,]\d+)?$/;
-  for(const line of rawLines){
-    const tokens = line.split(/\s+/);
-    if(tokens.length < 5) continue;
-    const last = tokens[tokens.length-1];
-    if(!/^M[EIA]$/i.test(last)) continue; // precisa terminar em ME/MI/MA
-    const priceTokens = tokens.slice(0, tokens.length-1).filter(t=>priceToken.test(t));
-    if(priceTokens.length < 3) continue;
-    const last3 = priceTokens.slice(-3).map(t=>parseFloat(t.replace(',', '.')));
-    const [menor, comum, maior] = last3;
-    if([menor,comum,maior].some(v=>isNaN(v))) continue;
-    // nome do produto = tudo antes do primeiro número de preço usado
-    const firstPriceIdx = tokens.indexOf(priceTokens[priceTokens.length-3]);
-    const nameTokens = tokens.slice(0, firstPriceIdx >= 0 ? firstPriceIdx : tokens.length-4);
-    const produto = nameTokens.join(' ').replace(/\s*-\s*(KG|UN|BAND|MOLHO)\b.*/i, '').trim();
-    if(!produto) continue;
-    rows.push({ produto: produto.toUpperCase(), menor, comum, maior });
-  }
-  return rows;
-}
 
 document.getElementById('bulkPaste').addEventListener('paste', ()=>{
   setTimeout(()=>{
     const text = document.getElementById('bulkPaste').value;
-    const praca = document.getElementById('pracaSel').value;
-    if(praca === 'campinas'){
-      const d = extractDateCampinas(text);
-      if(d) document.getElementById('bulkData').value = d;
-      document.getElementById('bulkCategoria').value = 'CAMPINAS';
-      return;
-    }
     const d = extractDate(text), c = extractCategoria(text);
     if(d) document.getElementById('bulkData').value = d;
     if(c) document.getElementById('bulkCategoria').value = c;
   }, 0);
 });
 
-document.getElementById('pracaSel').addEventListener('change', (e)=>{
-  document.getElementById('campinasPdfRow').style.display = e.target.value === 'campinas' ? 'block' : 'none';
-});
-
-if(window.pdfjsLib){
-  pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
-}
-
-document.getElementById('campinasPdfBtn').addEventListener('click', async ()=>{
-  const fileInput = document.getElementById('campinasPdfInput');
-  const statusEl = document.getElementById('campinasPdfStatus');
-  const file = fileInput.files[0];
-  if(!file){ statusEl.textContent = 'Selecione um arquivo PDF primeiro.'; return; }
-  if(!window.pdfjsLib || !window.Tesseract){
-    statusEl.textContent = 'Bibliotecas de leitura ainda não carregaram — aguarde alguns segundos e tente de novo.';
-    return;
-  }
-
-  try{
-    statusEl.textContent = 'Abrindo PDF...';
-    const arrayBuffer = await file.arrayBuffer();
-    const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
-
-    statusEl.textContent = 'Preparando leitor de texto (OCR)...';
-    const worker = await Tesseract.createWorker('por');
-
-    let fullText = '';
-    for(let i = 1; i <= pdf.numPages; i++){
-      statusEl.textContent = `Lendo página ${i} de ${pdf.numPages}...`;
-      const page = await pdf.getPage(i);
-      const viewport = page.getViewport({ scale: 2 });
-      const canvas = document.createElement('canvas');
-      canvas.width = viewport.width;
-      canvas.height = viewport.height;
-      const ctx = canvas.getContext('2d');
-      await page.render({ canvasContext: ctx, viewport }).promise;
-
-      statusEl.textContent = `Reconhecendo texto da página ${i} de ${pdf.numPages}...`;
-      const { data } = await worker.recognize(canvas);
-      fullText += data.text + '\n';
-    }
-    await worker.terminate();
-
-    document.getElementById('bulkPaste').value = fullText;
-    const d = extractDateCampinas(fullText);
-    if(d) document.getElementById('bulkData').value = d;
-    document.getElementById('bulkCategoria').value = 'CAMPINAS';
-
-    const previewRows = parseCampinasTable(fullText);
-    statusEl.textContent = `Leitura concluída: ${previewRows.length} produtos reconhecidos. Confira e clique em "Importar tabela".`;
-  }catch(err){
-    statusEl.textContent = 'Erro ao ler o PDF: ' + err.message;
-  }
-});
-
 document.getElementById('importBtn').addEventListener('click', async ()=>{
   const text = document.getElementById('bulkPaste').value;
-  const praca = document.getElementById('pracaSel').value;
   let data = document.getElementById('bulkData').value;
   const statusEl = document.getElementById('importStatus');
-
-  let rows;
-  if(praca === 'campinas'){
-    const detectedDate = extractDateCampinas(text);
-    if(detectedDate){ data = detectedDate; document.getElementById('bulkData').value = data; }
-    rows = parseCampinasTable(text);
-  }else{
-    const detectedDate = extractDate(text);
-    if(detectedDate){ data = detectedDate; document.getElementById('bulkData').value = data; }
-    rows = parseBulkTable(text);
-  }
-
+  const detectedDate = extractDate(text);
+  if(detectedDate){ data = detectedDate; document.getElementById('bulkData').value = data; }
   if(!data){ statusEl.textContent = 'Não encontrei a data no texto colado — informe manualmente.'; return; }
+  const rows = parseBulkTable(text);
   if(!rows.length){ statusEl.textContent = 'Não consegui identificar linhas de produto. Confira o formato colado.'; return; }
   rows.forEach(r=>{
-    const idx = entries.findIndex(e=>e.produto===r.produto && e.data===data && (e.praca||'sorocaba')===praca);
-    const entry = { produto: r.produto, data, menor: r.menor, comum: r.comum, maior: r.maior, praca };
+    const idx = entries.findIndex(e=>e.produto===r.produto && e.data===data);
+    const entry = { produto: r.produto, data, menor: r.menor, comum: r.comum, maior: r.maior };
     if(idx >= 0) entries[idx] = entry; else entries.push(entry);
   });
   await persist();
@@ -645,26 +525,14 @@ document.getElementById('importBtn').addEventListener('click', async ()=>{
   if(ghConfig) ghPush();
 });
 
-function prodKey(e){ return e.produto + '|' + (e.praca || 'sorocaba'); }
-function prodLabel(e){ return e.produto + (e.praca === 'campinas' ? ' — Campinas' : ' — Sorocaba'); }
-
-function refreshProductList(preferSelectProduto){
+function refreshProductList(preferSelect){
   const sel = document.getElementById('productSel');
   const current = sel.value;
-  const map = new Map();
-  entries.forEach(e=>{ if(!map.has(prodKey(e))) map.set(prodKey(e), prodLabel(e)); });
-  const opts = Array.from(map.entries()).sort((a,b)=>a[1].localeCompare(b[1]));
-  sel.innerHTML = opts.map(([key,label])=>`<option value="${key}">${label}</option>`).join('');
-  if(preferSelectProduto){
-    const match = opts.find(([key])=>key.startsWith(preferSelectProduto+'|'));
-    if(match){ sel.value = match[0]; return; }
-  }
-  if(opts.some(([key])=>key===current)) sel.value = current;
+  const products = Array.from(new Set(entries.map(e=>e.produto))).sort();
+  sel.innerHTML = products.map(p=>`<option value="${p}">${p}</option>`).join('');
+  if(preferSelect && products.includes(preferSelect)) sel.value = preferSelect;
+  else if(products.includes(current)) sel.value = current;
 }
-
-function selectedProdKey(){ return document.getElementById('productSel').value; }
-function keyProduto(key){ return key.split('|')[0]; }
-function keyPraca(key){ return key.split('|')[1]; }
 
 function weekKey(d){
   const date = new Date(d+'T00:00:00');
@@ -766,57 +634,50 @@ function buildSeasonTable(produto, codes, caption){
 
 function renderOverview(){
   const wrap = document.getElementById('overviewList');
-  const keys = Array.from(new Set(entries.map(e=>prodKey(e)))).sort((a,b)=>{
-    const ea = entries.find(e=>prodKey(e)===a), eb = entries.find(e=>prodKey(e)===b);
-    return prodLabel(ea).localeCompare(prodLabel(eb));
-  });
-  if(!keys.length){
+  const products = Array.from(new Set(entries.map(e=>e.produto))).sort();
+  if(!products.length){
     wrap.innerHTML = '<div class="empty">Importe uma tabela para ver os produtos aqui.</div>';
     return;
   }
-  wrap.innerHTML = keys.map(key=>{
-    const p = keyProduto(key), praca = keyPraca(key);
-    const list = entries.filter(e=>prodKey(e)===key).sort((a,b)=>a.data.localeCompare(b.data));
+  wrap.innerHTML = products.map(p=>{
+    const list = entries.filter(e=>e.produto===p).sort((a,b)=>a.data.localeCompare(b.data));
     const last = list[list.length-1];
-    const label = prodLabel(last);
+    const base = baseGroup(p);
+    const img = HORTIPEDIA_IMAGES[base];
+    const slug = HORTIPEDIA_SLUGS[base] || base;
+    const pageUrl = `https://ceagesp.gov.br/hortiescolha/hortipedia/${slug}/`;
+    const codes = getSeasonCodes(p);
 
     let seasonHtml = '';
-    if(praca === 'sorocaba'){
-      const base = baseGroup(p);
-      const img = HORTIPEDIA_IMAGES[base];
-      const slug = HORTIPEDIA_SLUGS[base] || base;
-      const pageUrl = `https://ceagesp.gov.br/hortiescolha/hortipedia/${slug}/`;
-      const codes = getSeasonCodes(p);
-      if(codes){
-        seasonHtml += buildSeasonTable(p, codes, 'SAZONALIDADE POR QUANTIDADE');
-        seasonHtml += `<div class="season-legend">
-          <span><i style="background:#93c66e;"></i> Alta</span>
-          <span><i style="background:#ffe14d;"></i> Média</span>
-          <span><i style="background:#e0574a;"></i> Baixa</span>
-        </div>`;
-      }
-      if(img){
-        seasonHtml += `<div class="season-caption" style="margin-top:8px;">SAZONALIDADE POR PREÇO</div><img src="${img.preco}" alt="Sazonalidade por preço - ${p}">`;
-      }
-      if(!codes && !img){
-        seasonHtml = `<a class="season-link" href="${pageUrl}" target="_blank" rel="noopener">Ver sazonalidade no site ↗</a>`;
-      }
+    if(codes){
+      seasonHtml += buildSeasonTable(p, codes, 'SAZONALIDADE POR QUANTIDADE');
+      seasonHtml += `<div class="season-legend">
+        <span><i style="background:#93c66e;"></i> Alta</span>
+        <span><i style="background:#ffe14d;"></i> Média</span>
+        <span><i style="background:#e0574a;"></i> Baixa</span>
+      </div>`;
+    }
+    if(img){
+      seasonHtml += `<div class="season-caption" style="margin-top:8px;">SAZONALIDADE POR PREÇO</div><img src="${img.preco}" alt="Sazonalidade por preço - ${p}">`;
+    }
+    if(!codes && !img){
+      seasonHtml = `<a class="season-link" href="${pageUrl}" target="_blank" rel="noopener">Ver sazonalidade no site ↗</a>`;
     }
 
     return `<div class="ov-row">
-      <div class="ov-icon" style="background:${colorForGroup(baseGroup(p))};"></div>
+      <div class="ov-icon" style="background:${colorForGroup(base)};"></div>
       <div class="ov-name">
-        <div class="p">${label}</div>
+        <div class="p">${p}</div>
         <div class="s">${list.length} cotação${list.length>1?'ões':''}</div>
       </div>
       <div class="ov-price">${fmt(last.comum)}</div>
-      <canvas class="ov-spark" data-key="${key}"></canvas>
+      <canvas class="ov-spark" data-produto="${p}"></canvas>
     </div>
     <div class="ov-season">${seasonHtml}</div>`;
   }).join('');
   wrap.querySelectorAll('.ov-spark').forEach(canvas=>{
-    const key = canvas.dataset.key;
-    const list = entries.filter(e=>prodKey(e)===key).sort((a,b)=>a.data.localeCompare(b.data)).slice(-15);
+    const p = canvas.dataset.produto;
+    const list = entries.filter(e=>e.produto===p).sort((a,b)=>a.data.localeCompare(b.data)).slice(-15);
     const points = list.map(e=>e.comum);
     const isUp = points.length>1 && points[points.length-1] >= points[0];
     drawSparkline(canvas, points, isUp);
@@ -839,15 +700,14 @@ function draw(){
   const W = rect.width, H = rect.height;
   ctx.clearRect(0,0,W,H);
 
-  const productKey = document.getElementById('productSel').value;
+  const product = document.getElementById('productSel').value;
   const granularity = document.getElementById('granularity').value;
-  if(!productKey){
+  if(!product){
     ctx.fillStyle = '#898781'; ctx.font = '13px sans-serif';
     ctx.fillText('Importe uma tabela para começar.', 16, 30);
     return;
   }
-  const prodName = keyProduto(productKey), prodPraca = keyPraca(productKey);
-  const list = entries.filter(e=>e.produto===prodName && (e.praca||'sorocaba')===prodPraca).sort((a,b)=>a.data.localeCompare(b.data));
+  const list = entries.filter(e=>e.produto===product).sort((a,b)=>a.data.localeCompare(b.data));
   const points = aggregate(list, granularity);
   if(points.length < 2){
     ctx.fillStyle = '#898781'; ctx.font = '13px sans-serif';
