@@ -411,6 +411,13 @@ async function safeSet(key, value){
 async function loadEntries(){
   entries = (await safeGet(KEY)) || [];
   temps = (await safeGet(TEMP_KEY)) || {};
+
+  let migrated = false;
+  entries.forEach(e=>{
+    if(!e.categoria){ e.categoria = 'LEGUMES'; migrated = true; }
+  });
+  if(migrated) await persist();
+
   refreshProductList();
   render();
   updateStorageBadge();
@@ -597,25 +604,36 @@ function drawSparkline(canvas, points, isUp){
 
 function renderDatesList(){
   const wrap = document.getElementById('datesList');
-  const dates = Array.from(new Set([...entries.map(e=>e.data), ...Object.keys(temps)])).sort().reverse();
-  if(!dates.length){ wrap.innerHTML = '<div class="empty">Nenhuma data importada ainda.</div>'; return; }
-  wrap.innerHTML = dates.map(d=>{
-    const count = entries.filter(e=>e.data===d).length;
-    const hasTemp = temps[d] !== undefined;
-    return `<div class="date-row">
-      <div class="d-info">
-        <span class="d-date">${d.split('-').reverse().join('/')}</span>
-        <span class="d-count">${count} produto${count!==1?'s':''}${hasTemp ? ' · temp. registrada' : ''}</span>
-      </div>
-      <button class="del-btn" data-date="${d}">Excluir</button>
+  if(!entries.length){ wrap.innerHTML = '<div class="empty">Nenhuma data importada ainda.</div>'; return; }
+
+  const categorias = Array.from(new Set(entries.map(e=>e.categoria || 'SEM CATEGORIA'))).sort();
+  wrap.innerHTML = categorias.map(cat=>{
+    const dates = Array.from(new Set(entries.filter(e=>(e.categoria||'SEM CATEGORIA')===cat).map(e=>e.data))).sort().reverse();
+    const rows = dates.map(d=>{
+      const count = entries.filter(e=>e.data===d && (e.categoria||'SEM CATEGORIA')===cat).length;
+      const hasTemp = temps[d] !== undefined;
+      return `<div class="date-row">
+        <div class="d-info">
+          <span class="d-date">${d.split('-').reverse().join('/')}</span>
+          <span class="d-count">${count} produto${count!==1?'s':''}${hasTemp ? ' · temp. registrada' : ''}</span>
+        </div>
+        <button class="del-btn" data-date="${d}" data-categoria="${cat}">Excluir</button>
+      </div>`;
+    }).join('');
+    return `<div style="margin-bottom:14px;">
+      <div class="season-caption" style="margin-bottom:2px;">${cat}</div>
+      ${rows}
     </div>`;
   }).join('');
+
   wrap.querySelectorAll('.del-btn').forEach(btn=>{
     btn.addEventListener('click', async ()=>{
       const d = btn.dataset.date;
-      if(!confirm(`Excluir todos os dados de ${d.split('-').reverse().join('/')}?`)) return;
-      entries = entries.filter(e=>e.data!==d);
-      delete temps[d];
+      const cat = btn.dataset.categoria;
+      if(!confirm(`Excluir os produtos de ${cat} em ${d.split('-').reverse().join('/')}?`)) return;
+      entries = entries.filter(e=>!(e.data===d && (e.categoria||'SEM CATEGORIA')===cat));
+      const stillHasDate = entries.some(e=>e.data===d);
+      if(!stillHasDate) delete temps[d];
       await persist(); await persistTemps();
       refreshProductList(); render();
       if(ghConfig) ghPush();
