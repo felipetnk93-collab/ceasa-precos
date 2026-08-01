@@ -127,7 +127,10 @@
   </div>
 
   <div class="card">
-    <h2>Visão geral dos produtos</h2>
+    <div class="toolbar">
+      <h2 style="margin:0;">Visão geral dos produtos</h2>
+      <select id="categoriaFiltro" class="tight"><option value="">Todas as categorias</option></select>
+    </div>
     <div id="overviewList"></div>
   </div>
 
@@ -503,9 +506,10 @@ document.getElementById('importBtn').addEventListener('click', async ()=>{
   if(!data){ statusEl.textContent = 'Não encontrei a data no texto colado — informe manualmente.'; return; }
   const rows = parseBulkTable(text);
   if(!rows.length){ statusEl.textContent = 'Não consegui identificar linhas de produto. Confira o formato colado.'; return; }
+  const categoria = (document.getElementById('bulkCategoria').value || 'SEM CATEGORIA').trim().toUpperCase();
   rows.forEach(r=>{
     const idx = entries.findIndex(e=>e.produto===r.produto && e.data===data);
-    const entry = { produto: r.produto, data, menor: r.menor, comum: r.comum, maior: r.maior };
+    const entry = { produto: r.produto, data, menor: r.menor, comum: r.comum, maior: r.maior, categoria };
     if(idx >= 0) entries[idx] = entry; else entries.push(entry);
   });
   await persist();
@@ -632,9 +636,23 @@ function buildSeasonTable(produto, codes, caption){
     </table>`;
 }
 
+function refreshCategoriaFiltro(){
+  const sel = document.getElementById('categoriaFiltro');
+  const current = sel.value;
+  const categorias = Array.from(new Set(entries.map(e=>e.categoria || 'SEM CATEGORIA'))).sort();
+  sel.innerHTML = '<option value="">Todas as categorias</option>' +
+    categorias.map(c=>`<option value="${c}">${c}</option>`).join('');
+  if(categorias.includes(current)) sel.value = current;
+}
+
 function renderOverview(){
   const wrap = document.getElementById('overviewList');
-  const products = Array.from(new Set(entries.map(e=>e.produto))).sort();
+  refreshCategoriaFiltro();
+  const categoriaFiltro = document.getElementById('categoriaFiltro').value;
+  const productsAll = Array.from(new Set(entries.map(e=>e.produto))).sort();
+  const products = categoriaFiltro
+    ? productsAll.filter(p=>entries.some(e=>e.produto===p && (e.categoria||'SEM CATEGORIA')===categoriaFiltro))
+    : productsAll;
   if(!products.length){
     wrap.innerHTML = '<div class="empty">Importe uma tabela para ver os produtos aqui.</div>';
     return;
@@ -668,7 +686,7 @@ function renderOverview(){
       <div class="ov-icon" style="background:${colorForGroup(base)};"></div>
       <div class="ov-name">
         <div class="p">${p}</div>
-        <div class="s">${list.length} cotação${list.length>1?'ões':''}</div>
+        <div class="s">${last.categoria || 'Sem categoria'} · ${list.length} cotação${list.length>1?'ões':''}</div>
       </div>
       <div class="ov-price">${fmt(last.comum)}</div>
       <canvas class="ov-spark" data-produto="${p}"></canvas>
@@ -858,6 +876,8 @@ function setupInteraction(){
   document.getElementById('showTemp').addEventListener('change', drawTemp);
   window.addEventListener('resize', ()=>{ draw(); drawTemp(); renderOverview(); });
 }
+
+document.getElementById('categoriaFiltro').addEventListener('change', renderOverview);
 
 setupInteraction();
 loadEntries();
