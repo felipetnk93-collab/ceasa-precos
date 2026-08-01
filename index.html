@@ -414,7 +414,7 @@ async function loadEntries(){
 
   let migrated = false;
   entries.forEach(e=>{
-    if(!e.categoria){ e.categoria = 'LEGUMES'; migrated = true; }
+    if(!e.categoria || e.categoria === 'SEM CATEGORIA'){ e.categoria = 'LEGUMES'; migrated = true; }
   });
   if(migrated) await persist();
 
