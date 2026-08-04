@@ -10051,8 +10051,432 @@
       "comum": 10.16,
       "maior": 10.89,
       "categoria": "FRUTAS"
+    },
+    {
+      "produto": "ABÓBORA JAPONESA",
+      "data": "2026-08-03",
+      "menor": 2.25,
+      "comum": 2.57,
+      "maior": 2.92,
+      "categoria": "SEM CATEGORIA"
+    },
+    {
+      "produto": "ABÓBORA MORANGA",
+      "data": "2026-08-03",
+      "menor": 2,
+      "comum": 2.2,
+      "maior": 2.5,
+      "categoria": "SEM CATEGORIA"
+    },
+    {
+      "produto": "ABÓBORA PAULISTA",
+      "data": "2026-08-03",
+      "menor": 1.59,
+      "comum": 2.06,
+      "maior": 2.52,
+      "categoria": "SEM CATEGORIA"
+    },
+    {
+      "produto": "ABÓBORA SECA",
+      "data": "2026-08-03",
+      "menor": 3.66,
+      "comum": 4.15,
+      "maior": 4.51,
+      "categoria": "SEM CATEGORIA"
+    },
+    {
+      "produto": "ABOBRINHA BRASILEIRA",
+      "data": "2026-08-03",
+      "menor": 3,
+      "comum": 2.66,
+      "maior": 2.97,
+      "categoria": "SEM CATEGORIA"
+    },
+    {
+      "produto": "ABOBRINHA ITALIANA",
+      "data": "2026-08-03",
+      "menor": 3,
+      "comum": 2.76,
+      "maior": 3.02,
+      "categoria": "SEM CATEGORIA"
+    },
+    {
+      "produto": "AÇAFRÃO (CÚRCUMA)",
+      "data": "2026-08-03",
+      "menor": 3.79,
+      "comum": 4.79,
+      "maior": 5.78,
+      "categoria": "SEM CATEGORIA"
+    },
+    {
+      "produto": "ALCACHOFRA",
+      "data": "2026-08-03",
+      "menor": 22.5,
+      "comum": 23.75,
+      "maior": 25,
+      "categoria": "SEM CATEGORIA"
+    },
+    {
+      "produto": "BATATA-DOCE AMARELA",
+      "data": "2026-08-03",
+      "menor": 1.24,
+      "comum": 1.41,
+      "maior": 1.51,
+      "categoria": "SEM CATEGORIA"
+    },
+    {
+      "produto": "BATATA-DOCE BRANCA",
+      "data": "2026-08-03",
+      "menor": 1.55,
+      "comum": 1.75,
+      "maior": 1.98,
+      "categoria": "SEM CATEGORIA"
+    },
+    {
+      "produto": "BATATA-DOCE ROSADA",
+      "data": "2026-08-03",
+      "menor": 1.41,
+      "comum": 1.69,
+      "maior": 1.98,
+      "categoria": "SEM CATEGORIA"
+    },
+    {
+      "produto": "BATATA-DOCE ROXA",
+      "data": "2026-08-03",
+      "menor": 1.76,
+      "comum": 2.11,
+      "maior": 2.48,
+      "categoria": "SEM CATEGORIA"
+    },
+    {
+      "produto": "BERINJELA COMUM",
+      "data": "2026-08-03",
+      "menor": 3,
+      "comum": 4.82,
+      "maior": 5.39,
+      "categoria": "SEM CATEGORIA"
+    },
+    {
+      "produto": "BERINJELA JAPONESA",
+      "data": "2026-08-03",
+      "menor": 3,
+      "comum": 11.25,
+      "maior": 11.88,
+      "categoria": "SEM CATEGORIA"
+    },
+    {
+      "produto": "BERINJELA PARA CONSERVA",
+      "data": "2026-08-03",
+      "menor": 12,
+      "comum": 12.5,
+      "maior": 13,
+      "categoria": "SEM CATEGORIA"
+    },
+    {
+      "produto": "BETERRABA",
+      "data": "2026-08-03",
+      "menor": 1.17,
+      "comum": 1.31,
+      "maior": 1.46,
+      "categoria": "SEM CATEGORIA"
+    },
+    {
+      "produto": "CARÁ",
+      "data": "2026-08-03",
+      "menor": 2.09,
+      "comum": 2.35,
+      "maior": 2.62,
+      "categoria": "SEM CATEGORIA"
+    },
+    {
+      "produto": "CENOURA",
+      "data": "2026-08-03",
+      "menor": 3.62,
+      "comum": 3.79,
+      "maior": 3.97,
+      "categoria": "SEM CATEGORIA"
+    },
+    {
+      "produto": "CHUCHU",
+      "data": "2026-08-03",
+      "menor": 3,
+      "comum": 1.5,
+      "maior": 1.63,
+      "categoria": "SEM CATEGORIA"
+    },
+    {
+      "produto": "ERVILHA TORTA",
+      "data": "2026-08-03",
+      "menor": 3,
+      "comum": 12.5,
+      "maior": 13.59,
+      "categoria": "SEM CATEGORIA"
+    },
+    {
+      "produto": "GENGIBRE",
+      "data": "2026-08-03",
+      "menor": 2.86,
+      "comum": 3.96,
+      "maior": 5.04,
+      "categoria": "SEM CATEGORIA"
+    },
+    {
+      "produto": "INHAME",
+      "data": "2026-08-03",
+      "menor": 3,
+      "comum": 3.05,
+      "maior": 3.35,
+      "categoria": "SEM CATEGORIA"
+    },
+    {
+      "produto": "JILÓ",
+      "data": "2026-08-03",
+      "menor": 3,
+      "comum": 8.41,
+      "maior": 9.19,
+      "categoria": "SEM CATEGORIA"
+    },
+    {
+      "produto": "MANDIOCA",
+      "data": "2026-08-03",
+      "menor": 1.5,
+      "comum": 1.55,
+      "maior": 1.58,
+      "categoria": "SEM CATEGORIA"
+    },
+    {
+      "produto": "MANDIOQUINHA",
+      "data": "2026-08-03",
+      "menor": 5.54,
+      "comum": 5.93,
+      "maior": 6.32,
+      "categoria": "SEM CATEGORIA"
+    },
+    {
+      "produto": "MAXIXE",
+      "data": "2026-08-03",
+      "menor": 3.82,
+      "comum": 5.19,
+      "maior": 6.55,
+      "categoria": "SEM CATEGORIA"
+    },
+    {
+      "produto": "NIGAGORI",
+      "data": "2026-08-03",
+      "menor": 8,
+      "comum": 9,
+      "maior": 10,
+      "categoria": "SEM CATEGORIA"
+    },
+    {
+      "produto": "PEPINO CAIPIRA",
+      "data": "2026-08-03",
+      "menor": 3,
+      "comum": 4.44,
+      "maior": 4.74,
+      "categoria": "SEM CATEGORIA"
+    },
+    {
+      "produto": "PEPINO COMUM",
+      "data": "2026-08-03",
+      "menor": 3,
+      "comum": 1.62,
+      "maior": 1.77,
+      "categoria": "SEM CATEGORIA"
+    },
+    {
+      "produto": "PEPINO JAPONÊS",
+      "data": "2026-08-03",
+      "menor": 3,
+      "comum": 3.68,
+      "maior": 3.97,
+      "categoria": "SEM CATEGORIA"
+    },
+    {
+      "produto": "PEPINO PARA CONSERVA",
+      "data": "2026-08-03",
+      "menor": 3,
+      "comum": 12,
+      "maior": 13.5,
+      "categoria": "SEM CATEGORIA"
+    },
+    {
+      "produto": "PIMENTA BIQUINHO - DOCE/NÃO PUNGENTES",
+      "data": "2026-08-03",
+      "menor": 29.84,
+      "comum": 34.82,
+      "maior": 39.79,
+      "categoria": "SEM CATEGORIA"
+    },
+    {
+      "produto": "PIMENTA CAMBUCI",
+      "data": "2026-08-03",
+      "menor": 2,
+      "comum": 11.26,
+      "maior": 11.98,
+      "categoria": "SEM CATEGORIA"
+    },
+    {
+      "produto": "PIMENTA DEDO DE MOÇA",
+      "data": "2026-08-03",
+      "menor": 7.66,
+      "comum": 9.6,
+      "maior": 11.56,
+      "categoria": "SEM CATEGORIA"
+    },
+    {
+      "produto": "PIMENTA MALAGUETA/MALAGUETÃO",
+      "data": "2026-08-03",
+      "menor": 20,
+      "comum": 23,
+      "maior": 26.67,
+      "categoria": "SEM CATEGORIA"
+    },
+    {
+      "produto": "PIMENTA VERDE",
+      "data": "2026-08-03",
+      "menor": 2,
+      "comum": 7.5,
+      "maior": 8.75,
+      "categoria": "SEM CATEGORIA"
+    },
+    {
+      "produto": "PIMENTA VERDE AMERICANA",
+      "data": "2026-08-03",
+      "menor": 3,
+      "comum": 9.58,
+      "maior": 10.21,
+      "categoria": "SEM CATEGORIA"
+    },
+    {
+      "produto": "PIMENTÃO AMARELO",
+      "data": "2026-08-03",
+      "menor": 3,
+      "comum": 14.62,
+      "maior": 15.63,
+      "categoria": "SEM CATEGORIA"
+    },
+    {
+      "produto": "PIMENTÃO VERDE",
+      "data": "2026-08-03",
+      "menor": 3,
+      "comum": 5.52,
+      "maior": 6.11,
+      "categoria": "SEM CATEGORIA"
+    },
+    {
+      "produto": "PIMENTÃO VERMELHO",
+      "data": "2026-08-03",
+      "menor": 3,
+      "comum": 15.64,
+      "maior": 16.64,
+      "categoria": "SEM CATEGORIA"
+    },
+    {
+      "produto": "QUIABO",
+      "data": "2026-08-03",
+      "menor": 3,
+      "comum": 7.47,
+      "maior": 7.91,
+      "categoria": "SEM CATEGORIA"
+    },
+    {
+      "produto": "TOMATE CAQUI",
+      "data": "2026-08-03",
+      "menor": 6.67,
+      "comum": 7.55,
+      "maior": 8.43,
+      "categoria": "SEM CATEGORIA"
+    },
+    {
+      "produto": "TOMATE CARMEM",
+      "data": "2026-08-03",
+      "menor": 3,
+      "comum": 3.34,
+      "maior": 3.64,
+      "categoria": "SEM CATEGORIA"
+    },
+    {
+      "produto": "TOMATE CEREJA",
+      "data": "2026-08-03",
+      "menor": 11.73,
+      "comum": 12.68,
+      "maior": 13.64,
+      "categoria": "SEM CATEGORIA"
+    },
+    {
+      "produto": "TOMATE COQUETEL",
+      "data": "2026-08-03",
+      "menor": 15.64,
+      "comum": 16.98,
+      "maior": 18.34,
+      "categoria": "SEM CATEGORIA"
+    },
+    {
+      "produto": "TOMATE DÉBORA",
+      "data": "2026-08-03",
+      "menor": 3,
+      "comum": 3.89,
+      "maior": 4.17,
+      "categoria": "SEM CATEGORIA"
+    },
+    {
+      "produto": "TOMATE HOLANDÊS",
+      "data": "2026-08-03",
+      "menor": 3,
+      "comum": 10.62,
+      "maior": 11.28,
+      "categoria": "SEM CATEGORIA"
+    },
+    {
+      "produto": "TOMATE PIZZADORO",
+      "data": "2026-08-03",
+      "menor": 3,
+      "comum": 4.04,
+      "maior": 4.34,
+      "categoria": "SEM CATEGORIA"
+    },
+    {
+      "produto": "TOMATE RASTEIRO",
+      "data": "2026-08-03",
+      "menor": 3,
+      "comum": 2.58,
+      "maior": 2.84,
+      "categoria": "SEM CATEGORIA"
+    },
+    {
+      "produto": "TOMATE SWEET GRAPE",
+      "data": "2026-08-03",
+      "menor": 10.17,
+      "comum": 11.35,
+      "maior": 12.62,
+      "categoria": "SEM CATEGORIA"
+    },
+    {
+      "produto": "VAGEM HOLANDESA",
+      "data": "2026-08-03",
+      "menor": 9.23,
+      "comum": 10.42,
+      "maior": 11.62,
+      "categoria": "SEM CATEGORIA"
+    },
+    {
+      "produto": "VAGEM MACARRÃO",
+      "data": "2026-08-03",
+      "menor": 3,
+      "comum": 8.37,
+      "maior": 9.06,
+      "categoria": "SEM CATEGORIA"
+    },
+    {
+      "produto": "YACON",
+      "data": "2026-08-03",
+      "menor": 3,
+      "comum": 4.09,
+      "maior": 4.4,
+      "categoria": "SEM CATEGORIA"
     }
   ],
   "temps": {},
-  "atualizadoEm": "2026-08-01T12:29:36.537Z"
+  "atualizadoEm": "2026-08-04T13:18:56.129Z"
 }
