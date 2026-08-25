@@ -21779,8 +21779,424 @@
       "comum": 8.13,
       "maior": 8.65,
       "categoria": "FRUTAS"
+    },
+    {
+      "produto": "ABÓBORA JAPONESA",
+      "data": "2026-08-24",
+      "menor": 2.14,
+      "comum": 2.42,
+      "maior": 2.65,
+      "categoria": "LEGUMES"
+    },
+    {
+      "produto": "ABÓBORA MORANGA",
+      "data": "2026-08-24",
+      "menor": 2.5,
+      "comum": 2.75,
+      "maior": 3,
+      "categoria": "LEGUMES"
+    },
+    {
+      "produto": "ABÓBORA PAULISTA",
+      "data": "2026-08-24",
+      "menor": 2.5,
+      "comum": 2.85,
+      "maior": 3.13,
+      "categoria": "LEGUMES"
+    },
+    {
+      "produto": "ABÓBORA SECA",
+      "data": "2026-08-24",
+      "menor": 3.37,
+      "comum": 3.8,
+      "maior": 4.21,
+      "categoria": "LEGUMES"
+    },
+    {
+      "produto": "ABOBRINHA BRASILEIRA",
+      "data": "2026-08-24",
+      "menor": 3,
+      "comum": 2.44,
+      "maior": 2.7,
+      "categoria": "LEGUMES"
+    },
+    {
+      "produto": "ABOBRINHA ITALIANA",
+      "data": "2026-08-24",
+      "menor": 3,
+      "comum": 2.17,
+      "maior": 2.44,
+      "categoria": "LEGUMES"
+    },
+    {
+      "produto": "AÇAFRÃO (CÚRCUMA)",
+      "data": "2026-08-24",
+      "menor": 4.46,
+      "comum": 5.46,
+      "maior": 6.45,
+      "categoria": "LEGUMES"
+    },
+    {
+      "produto": "ALCACHOFRA",
+      "data": "2026-08-24",
+      "menor": 20.93,
+      "comum": 22.19,
+      "maior": 23.43,
+      "categoria": "LEGUMES"
+    },
+    {
+      "produto": "BATATA-DOCE AMARELA",
+      "data": "2026-08-24",
+      "menor": 1.46,
+      "comum": 1.54,
+      "maior": 1.61,
+      "categoria": "LEGUMES"
+    },
+    {
+      "produto": "BATATA-DOCE BRANCA",
+      "data": "2026-08-24",
+      "menor": 1.59,
+      "comum": 1.87,
+      "maior": 2.15,
+      "categoria": "LEGUMES"
+    },
+    {
+      "produto": "BATATA-DOCE ROSADA",
+      "data": "2026-08-24",
+      "menor": 1.15,
+      "comum": 1.42,
+      "maior": 1.64,
+      "categoria": "LEGUMES"
+    },
+    {
+      "produto": "BATATA-DOCE ROXA",
+      "data": "2026-08-24",
+      "menor": 1.37,
+      "comum": 1.65,
+      "maior": 1.93,
+      "categoria": "LEGUMES"
+    },
+    {
+      "produto": "BERINJELA COMUM",
+      "data": "2026-08-24",
+      "menor": 3,
+      "comum": 3.05,
+      "maior": 3.5,
+      "categoria": "LEGUMES"
+    },
+    {
+      "produto": "BERINJELA JAPONESA",
+      "data": "2026-08-24",
+      "menor": 3,
+      "comum": 8.75,
+      "maior": 9.38,
+      "categoria": "LEGUMES"
+    },
+    {
+      "produto": "BERINJELA PARA CONSERVA",
+      "data": "2026-08-24",
+      "menor": 5,
+      "comum": 5.5,
+      "maior": 6,
+      "categoria": "LEGUMES"
+    },
+    {
+      "produto": "BETERRABA",
+      "data": "2026-08-24",
+      "menor": 1.18,
+      "comum": 1.32,
+      "maior": 1.43,
+      "categoria": "LEGUMES"
+    },
+    {
+      "produto": "CARÁ",
+      "data": "2026-08-24",
+      "menor": 2.11,
+      "comum": 2.4,
+      "maior": 2.67,
+      "categoria": "LEGUMES"
+    },
+    {
+      "produto": "CENOURA",
+      "data": "2026-08-24",
+      "menor": 3.34,
+      "comum": 3.52,
+      "maior": 3.68,
+      "categoria": "LEGUMES"
+    },
+    {
+      "produto": "CHUCHU",
+      "data": "2026-08-24",
+      "menor": 3,
+      "comum": 1.83,
+      "maior": 2.11,
+      "categoria": "LEGUMES"
+    },
+    {
+      "produto": "ERVILHA TORTA",
+      "data": "2026-08-24",
+      "menor": 3,
+      "comum": 13.18,
+      "maior": 14.15,
+      "categoria": "LEGUMES"
+    },
+    {
+      "produto": "GENGIBRE",
+      "data": "2026-08-24",
+      "menor": 2.89,
+      "comum": 3.76,
+      "maior": 4.61,
+      "categoria": "LEGUMES"
+    },
+    {
+      "produto": "INHAME",
+      "data": "2026-08-24",
+      "menor": 3,
+      "comum": 3.7,
+      "maior": 3.97,
+      "categoria": "LEGUMES"
+    },
+    {
+      "produto": "JILÓ",
+      "data": "2026-08-24",
+      "menor": 3,
+      "comum": 7.87,
+      "maior": 8.5,
+      "categoria": "LEGUMES"
+    },
+    {
+      "produto": "MANDIOCA",
+      "data": "2026-08-24",
+      "menor": 1.37,
+      "comum": 1.43,
+      "maior": 1.47,
+      "categoria": "LEGUMES"
+    },
+    {
+      "produto": "MANDIOQUINHA",
+      "data": "2026-08-24",
+      "menor": 5.29,
+      "comum": 5.7,
+      "maior": 6.11,
+      "categoria": "LEGUMES"
+    },
+    {
+      "produto": "MAXIXE",
+      "data": "2026-08-24",
+      "menor": 4.07,
+      "comum": 5.11,
+      "maior": 6.16,
+      "categoria": "LEGUMES"
+    },
+    {
+      "produto": "NIGAGORI",
+      "data": "2026-08-24",
+      "menor": 10,
+      "comum": 12,
+      "maior": 15,
+      "categoria": "LEGUMES"
+    },
+    {
+      "produto": "PEPINO CAIPIRA",
+      "data": "2026-08-24",
+      "menor": 3,
+      "comum": 4.83,
+      "maior": 5.17,
+      "categoria": "LEGUMES"
+    },
+    {
+      "produto": "PEPINO COMUM",
+      "data": "2026-08-24",
+      "menor": 3,
+      "comum": 1.95,
+      "maior": 2.12,
+      "categoria": "LEGUMES"
+    },
+    {
+      "produto": "PEPINO JAPONÊS",
+      "data": "2026-08-24",
+      "menor": 3,
+      "comum": 3.54,
+      "maior": 3.83,
+      "categoria": "LEGUMES"
+    },
+    {
+      "produto": "PEPINO PARA CONSERVA",
+      "data": "2026-08-24",
+      "menor": 3,
+      "comum": 8,
+      "maior": 9,
+      "categoria": "LEGUMES"
+    },
+    {
+      "produto": "PIMENTA BIQUINHO - DOCE/NÃO PUNGENTES",
+      "data": "2026-08-24",
+      "menor": 21.53,
+      "comum": 25.7,
+      "maior": 30,
+      "categoria": "LEGUMES"
+    },
+    {
+      "produto": "PIMENTA CAMBUCI",
+      "data": "2026-08-24",
+      "menor": 2,
+      "comum": 8.17,
+      "maior": 8.8,
+      "categoria": "LEGUMES"
+    },
+    {
+      "produto": "PIMENTA DEDO DE MOÇA",
+      "data": "2026-08-24",
+      "menor": 8.35,
+      "comum": 10.85,
+      "maior": 13.22,
+      "categoria": "LEGUMES"
+    },
+    {
+      "produto": "PIMENTA MALAGUETA/MALAGUETÃO",
+      "data": "2026-08-24",
+      "menor": 21.26,
+      "comum": 25.15,
+      "maior": 28.78,
+      "categoria": "LEGUMES"
+    },
+    {
+      "produto": "PIMENTA VERDE AMERICANA",
+      "data": "2026-08-24",
+      "menor": 3,
+      "comum": 8.81,
+      "maior": 9.45,
+      "categoria": "LEGUMES"
+    },
+    {
+      "produto": "PIMENTÃO AMARELO",
+      "data": "2026-08-24",
+      "menor": 3,
+      "comum": 6.37,
+      "maior": 7,
+      "categoria": "LEGUMES"
+    },
+    {
+      "produto": "PIMENTÃO VERDE",
+      "data": "2026-08-24",
+      "menor": 3,
+      "comum": 4.58,
+      "maior": 4.98,
+      "categoria": "LEGUMES"
+    },
+    {
+      "produto": "PIMENTÃO VERMELHO",
+      "data": "2026-08-24",
+      "menor": 3,
+      "comum": 5.86,
+      "maior": 6.45,
+      "categoria": "LEGUMES"
+    },
+    {
+      "produto": "QUIABO",
+      "data": "2026-08-24",
+      "menor": 3,
+      "comum": 6.85,
+      "maior": 7.29,
+      "categoria": "LEGUMES"
+    },
+    {
+      "produto": "TOMATE CAQUI",
+      "data": "2026-08-24",
+      "menor": 8.6,
+      "comum": 9.79,
+      "maior": 11.34,
+      "categoria": "LEGUMES"
+    },
+    {
+      "produto": "TOMATE CARMEM",
+      "data": "2026-08-24",
+      "menor": 3,
+      "comum": 5.17,
+      "maior": 5.55,
+      "categoria": "LEGUMES"
+    },
+    {
+      "produto": "TOMATE CEREJA",
+      "data": "2026-08-24",
+      "menor": 12.78,
+      "comum": 15.27,
+      "maior": 17.02,
+      "categoria": "LEGUMES"
+    },
+    {
+      "produto": "TOMATE COQUETEL",
+      "data": "2026-08-24",
+      "menor": 18.8,
+      "comum": 20.24,
+      "maior": 21.58,
+      "categoria": "LEGUMES"
+    },
+    {
+      "produto": "TOMATE DÉBORA",
+      "data": "2026-08-24",
+      "menor": 3,
+      "comum": 6.14,
+      "maior": 6.69,
+      "categoria": "LEGUMES"
+    },
+    {
+      "produto": "TOMATE HOLANDÊS",
+      "data": "2026-08-24",
+      "menor": 3,
+      "comum": 15.6,
+      "maior": 16.35,
+      "categoria": "LEGUMES"
+    },
+    {
+      "produto": "TOMATE PIZZADORO",
+      "data": "2026-08-24",
+      "menor": 3,
+      "comum": 6.21,
+      "maior": 6.61,
+      "categoria": "LEGUMES"
+    },
+    {
+      "produto": "TOMATE RASTEIRO",
+      "data": "2026-08-24",
+      "menor": 3,
+      "comum": 3.8,
+      "maior": 4.05,
+      "categoria": "LEGUMES"
+    },
+    {
+      "produto": "TOMATE SWEET GRAPE",
+      "data": "2026-08-24",
+      "menor": 12.4,
+      "comum": 14.25,
+      "maior": 16.19,
+      "categoria": "LEGUMES"
+    },
+    {
+      "produto": "VAGEM HOLANDESA",
+      "data": "2026-08-24",
+      "menor": 9.16,
+      "comum": 10.48,
+      "maior": 11.8,
+      "categoria": "LEGUMES"
+    },
+    {
+      "produto": "VAGEM MACARRÃO",
+      "data": "2026-08-24",
+      "menor": 3,
+      "comum": 7.41,
+      "maior": 7.93,
+      "categoria": "LEGUMES"
+    },
+    {
+      "produto": "YACON",
+      "data": "2026-08-24",
+      "menor": 3,
+      "comum": 4.88,
+      "maior": 5.4,
+      "categoria": "LEGUMES"
     }
   ],
   "temps": {},
-  "atualizadoEm": "2026-08-22T20:09:26.328Z"
+  "atualizadoEm": "2026-08-25T11:15:57.753Z"
 }
