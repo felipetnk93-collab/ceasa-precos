@@ -22195,8 +22195,936 @@
       "comum": 4.88,
       "maior": 5.4,
       "categoria": "LEGUMES"
+    },
+    {
+      "produto": "ABACATE AVOCADO/HASS/FUERTE",
+      "data": "2026-08-24",
+      "menor": 6.52,
+      "comum": 7.94,
+      "maior": 9.34,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "ABACATE BREDA",
+      "data": "2026-08-24",
+      "menor": 3.5,
+      "comum": 3.94,
+      "maior": 4.39,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "ABACATE FORTUNA",
+      "data": "2026-08-24",
+      "menor": 3.3,
+      "comum": 3.76,
+      "maior": 4.23,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "ABACATE MARGARIDA",
+      "data": "2026-08-24",
+      "menor": 2,
+      "comum": 2.25,
+      "maior": 2.5,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "ABACATE QUINTAL",
+      "data": "2026-08-24",
+      "menor": 3.55,
+      "comum": 3.98,
+      "maior": 4.4,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "ABACAXI PÉROLA",
+      "data": "2026-08-24",
+      "menor": 12,
+      "comum": 3.11,
+      "maior": 3.45,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "ACEROLA",
+      "data": "2026-08-24",
+      "menor": 12.5,
+      "comum": 13.5,
+      "maior": 15,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "AMEIXA IMP.",
+      "data": "2026-08-24",
+      "menor": 48,
+      "comum": 12.22,
+      "maior": 13.33,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "AMEIXA RUBI MEL",
+      "data": "2026-08-24",
+      "menor": 15,
+      "comum": 15.83,
+      "maior": 16.67,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "AMEIXA SECA IMP.",
+      "data": "2026-08-24",
+      "menor": 19,
+      "comum": 20,
+      "maior": 21,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "AMORA",
+      "data": "2026-08-24",
+      "menor": 40,
+      "comum": 45,
+      "maior": 50,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "ATEMOIA",
+      "data": "2026-08-24",
+      "menor": 13,
+      "comum": 8.01,
+      "maior": 8.98,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "BANANA FIGO",
+      "data": "2026-08-24",
+      "menor": 6,
+      "comum": 6.25,
+      "maior": 6.5,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "BANANA MAÇÃ",
+      "data": "2026-08-24",
+      "menor": 7.03,
+      "comum": 7.29,
+      "maior": 7.55,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "BANANA NANICA",
+      "data": "2026-08-24",
+      "menor": 2.95,
+      "comum": 3.17,
+      "maior": 3.38,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "BANANA OURO VERDE",
+      "data": "2026-08-24",
+      "menor": 7,
+      "comum": 7.5,
+      "maior": 8,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "BANANA PRATA MG",
+      "data": "2026-08-24",
+      "menor": 4.5,
+      "comum": 4.84,
+      "maior": 5.18,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "BANANA PRATA SP",
+      "data": "2026-08-24",
+      "menor": 3.01,
+      "comum": 3.45,
+      "maior": 3.89,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "BANANA TERRA",
+      "data": "2026-08-24",
+      "menor": 5.9,
+      "comum": 6.18,
+      "maior": 6.46,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "CACAU",
+      "data": "2026-08-24",
+      "menor": 6.92,
+      "comum": 7.4,
+      "maior": 7.89,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "CAJU",
+      "data": "2026-08-24",
+      "menor": 5,
+      "comum": 13.6,
+      "maior": 16.17,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "CAQUI NACIONAL",
+      "data": "2026-08-24",
+      "menor": 20,
+      "comum": 22.5,
+      "maior": 25,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "CARAMBOLA",
+      "data": "2026-08-24",
+      "menor": 6.59,
+      "comum": 7.59,
+      "maior": 8.57,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "CEREJA IMP.",
+      "data": "2026-08-24",
+      "menor": 80,
+      "comum": 90,
+      "maior": 100,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "COCO VERDE",
+      "data": "2026-08-24",
+      "menor": 2.11,
+      "comum": 2.61,
+      "maior": 3.11,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "CUPUAÇU",
+      "data": "2026-08-24",
+      "menor": 6.67,
+      "comum": 7.5,
+      "maior": 8.33,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "FIGO",
+      "data": "2026-08-24",
+      "menor": 10,
+      "comum": 28.87,
+      "maior": 32.98,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "GOIABA BRANCA",
+      "data": "2026-08-24",
+      "menor": 18,
+      "comum": 5.1,
+      "maior": 5.46,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "GOIABA VERMELHA",
+      "data": "2026-08-24",
+      "menor": 18,
+      "comum": 5.06,
+      "maior": 5.39,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "GRANADILLA IMP. COLÔMBIA",
+      "data": "2026-08-24",
+      "menor": 36.17,
+      "comum": 38.08,
+      "maior": 39.9,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "GRAPE-FRUIT",
+      "data": "2026-08-24",
+      "menor": 5.33,
+      "comum": 6,
+      "maior": 6.67,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "GRAVIOLA",
+      "data": "2026-08-24",
+      "menor": 12.11,
+      "comum": 13.36,
+      "maior": 14.61,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "JABUTICABA",
+      "data": "2026-08-24",
+      "menor": 12,
+      "comum": 16,
+      "maior": 20,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "JACA",
+      "data": "2026-08-24",
+      "menor": 4.83,
+      "comum": 5.25,
+      "maior": 5.67,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "JAMBO",
+      "data": "2026-08-24",
+      "menor": 40,
+      "comum": 45,
+      "maior": 50,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "KIWI GOLD IMP.",
+      "data": "2026-08-24",
+      "menor": 44,
+      "comum": 34.53,
+      "maior": 36.53,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "LARANJA BAIA",
+      "data": "2026-08-24",
+      "menor": 6,
+      "comum": 1.54,
+      "maior": 1.73,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "LARANJA BAIA IMP.",
+      "data": "2026-08-24",
+      "menor": 6.2,
+      "comum": 6.86,
+      "maior": 7.53,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "LARANJA LIMA",
+      "data": "2026-08-24",
+      "menor": 16,
+      "comum": 1.46,
+      "maior": 1.68,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "LARANJA PERA",
+      "data": "2026-08-24",
+      "menor": 16,
+      "comum": 1.25,
+      "maior": 1.37,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "LARANJA SELETA",
+      "data": "2026-08-24",
+      "menor": 16,
+      "comum": 2.46,
+      "maior": 2.71,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "LIMA-DA-PÉRSIA",
+      "data": "2026-08-24",
+      "menor": 2.15,
+      "comum": 2.34,
+      "maior": 2.55,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "LIMÃO SICILIANO",
+      "data": "2026-08-24",
+      "menor": 4.89,
+      "comum": 5.36,
+      "maior": 5.8,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "LIMÃO SICILIANO IMP.",
+      "data": "2026-08-24",
+      "menor": 4.67,
+      "comum": 5.33,
+      "maior": 6,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "LIMÃO TAITI",
+      "data": "2026-08-24",
+      "menor": 4.58,
+      "comum": 4.85,
+      "maior": 5.12,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "MAÇÃ FUJI",
+      "data": "2026-08-24",
+      "menor": 80,
+      "comum": 6.51,
+      "maior": 6.77,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "MAÇÃ FUJI IMP.",
+      "data": "2026-08-24",
+      "menor": 80,
+      "comum": 7.45,
+      "maior": 7.72,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "MAÇÃ GALA",
+      "data": "2026-08-24",
+      "menor": 80,
+      "comum": 6.75,
+      "maior": 7.04,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "MAÇÃ GALA IMP.",
+      "data": "2026-08-24",
+      "menor": 80,
+      "comum": 9.06,
+      "maior": 9.35,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "MAÇÃ GOLDEN IMP.",
+      "data": "2026-08-24",
+      "menor": 80,
+      "comum": 9.44,
+      "maior": 9.72,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "MAÇÃ GRANNY SMITH IMP.",
+      "data": "2026-08-24",
+      "menor": 80,
+      "comum": 10,
+      "maior": 10.41,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "MAÇÃ PINK LADY IMP.",
+      "data": "2026-08-24",
+      "menor": 6.3,
+      "comum": 7.23,
+      "maior": 8.05,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "MAÇÃ RED IMP.",
+      "data": "2026-08-24",
+      "menor": 80,
+      "comum": 11.32,
+      "maior": 11.6,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "MAÇÃ RED IMP. ARGENTINA",
+      "data": "2026-08-24",
+      "menor": 80,
+      "comum": 14.26,
+      "maior": 14.61,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "MAÇÃ RED IMP. CHILE",
+      "data": "2026-08-24",
+      "menor": 80,
+      "comum": 10.54,
+      "maior": 10.83,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "MAMÃO FORMOSA",
+      "data": "2026-08-24",
+      "menor": 10,
+      "comum": 3.68,
+      "maior": 3.98,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "MAMÃO HAVAÍ",
+      "data": "2026-08-24",
+      "menor": 24,
+      "comum": 2.4,
+      "maior": 2.72,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "MANGA ESPADA",
+      "data": "2026-08-24",
+      "menor": 6.67,
+      "comum": 7.5,
+      "maior": 8.33,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "MANGA HADEM",
+      "data": "2026-08-24",
+      "menor": 13,
+      "comum": 5,
+      "maior": 5.17,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "MANGA PALMER",
+      "data": "2026-08-24",
+      "menor": 18,
+      "comum": 4.41,
+      "maior": 4.5,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "MANGA ROSA",
+      "data": "2026-08-24",
+      "menor": 6.67,
+      "comum": 7.5,
+      "maior": 8.33,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "MANGA TOMMY ATCKINS",
+      "data": "2026-08-24",
+      "menor": 18,
+      "comum": 4.69,
+      "maior": 4.93,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "MARACUJÁ AZEDO",
+      "data": "2026-08-24",
+      "menor": 11.4,
+      "comum": 11.71,
+      "maior": 12.02,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "MARACUJÁ DOCE",
+      "data": "2026-08-24",
+      "menor": 10,
+      "comum": 12.96,
+      "maior": 13.67,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "MELANCIA",
+      "data": "2026-08-24",
+      "menor": 1.34,
+      "comum": 1.44,
+      "maior": 1.55,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "MELANCIA BABY",
+      "data": "2026-08-24",
+      "menor": 4.24,
+      "comum": 4.62,
+      "maior": 5,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "MELÃO AMARELO",
+      "data": "2026-08-24",
+      "menor": 4.77,
+      "comum": 4.9,
+      "maior": 5.02,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "MELÃO GÁLIA",
+      "data": "2026-08-24",
+      "menor": 10.25,
+      "comum": 11.06,
+      "maior": 11.88,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "MELÃO ORANGE",
+      "data": "2026-08-24",
+      "menor": 7,
+      "comum": 6.45,
+      "maior": 7.23,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "MELÃO PELE DE SAPO",
+      "data": "2026-08-24",
+      "menor": 10,
+      "comum": 5.23,
+      "maior": 5.38,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "MELÃO POLPA BRANCA \"MATISSE\"",
+      "data": "2026-08-24",
+      "menor": 6.65,
+      "comum": 7.13,
+      "maior": 7.6,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "MEXERICA RIO",
+      "data": "2026-08-24",
+      "menor": 8,
+      "comum": 2.93,
+      "maior": 3.29,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "MIRTILO IMP.",
+      "data": "2026-08-24",
+      "menor": 69.63,
+      "comum": 76.29,
+      "maior": 86.67,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "MORANGO CAMINO REAL",
+      "data": "2026-08-24",
+      "menor": 4,
+      "comum": 14.41,
+      "maior": 16.91,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "MORANGO COMUM",
+      "data": "2026-08-24",
+      "menor": 4,
+      "comum": 13.01,
+      "maior": 15.96,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "NECTARINA IMP.",
+      "data": "2026-08-24",
+      "menor": 48,
+      "comum": 11.25,
+      "maior": 12.5,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "NÊSPERA",
+      "data": "2026-08-24",
+      "menor": 26.62,
+      "comum": 32.42,
+      "maior": 38.21,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "PERA DANJOU IMP.",
+      "data": "2026-08-24",
+      "menor": 80,
+      "comum": 7.91,
+      "maior": 8.25,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "PERA ERCOLINI IMP.",
+      "data": "2026-08-24",
+      "menor": 9.52,
+      "comum": 11,
+      "maior": 12.48,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "PERA FORELLI IMP.",
+      "data": "2026-08-24",
+      "menor": 9.42,
+      "comum": 10.24,
+      "maior": 11.06,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "PERA PACKHAMS TRIUMPH IMP.",
+      "data": "2026-08-24",
+      "menor": 80,
+      "comum": 7.02,
+      "maior": 7.25,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "PERA RED BARTLETT IMP.",
+      "data": "2026-08-24",
+      "menor": 80,
+      "comum": 6.94,
+      "maior": 7.11,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "PERA ROCHA IMP.",
+      "data": "2026-08-24",
+      "menor": 11,
+      "comum": 12,
+      "maior": 13,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "PERA WILLIAMS IMP.",
+      "data": "2026-08-24",
+      "menor": 80,
+      "comum": 9.14,
+      "maior": 9.41,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "PHYSALIS IMP. COLÔMBIA",
+      "data": "2026-08-24",
+      "menor": 50.37,
+      "comum": 56.07,
+      "maior": 61.32,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "PINHA",
+      "data": "2026-08-24",
+      "menor": 13,
+      "comum": 8.33,
+      "maior": 9.33,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "PITAIA",
+      "data": "2026-08-24",
+      "menor": 20,
+      "comum": 22.5,
+      "maior": 25,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "PITAIA IMP. COLÔMBIA",
+      "data": "2026-08-24",
+      "menor": 49.49,
+      "comum": 52.82,
+      "maior": 56.15,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "QUINCAM",
+      "data": "2026-08-24",
+      "menor": 30,
+      "comum": 32.5,
+      "maior": 35,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "ROMÃ IMP.",
+      "data": "2026-08-24",
+      "menor": 19.99,
+      "comum": 22.02,
+      "maior": 24.02,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "TÂMARA IMP. ISRAEL",
+      "data": "2026-08-24",
+      "menor": 46.27,
+      "comum": 51.26,
+      "maior": 60,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "TÂMARA IMP. TUNÍSIA",
+      "data": "2026-08-24",
+      "menor": 15.82,
+      "comum": 19.64,
+      "maior": 23.46,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "TAMARINDO",
+      "data": "2026-08-24",
+      "menor": 33.33,
+      "comum": 37.5,
+      "maior": 41.67,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "TANGERINA CRAVO",
+      "data": "2026-08-24",
+      "menor": 10,
+      "comum": 2.5,
+      "maior": 2.7,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "TANGERINA DECOPOM",
+      "data": "2026-08-24",
+      "menor": 11,
+      "comum": 5.26,
+      "maior": 5.59,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "TANGERINA IMP.",
+      "data": "2026-08-24",
+      "menor": 7,
+      "comum": 7.5,
+      "maior": 8,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "TANGERINA MURCOTE",
+      "data": "2026-08-24",
+      "menor": 8,
+      "comum": 1.47,
+      "maior": 1.76,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "TANGERINA OLE",
+      "data": "2026-08-24",
+      "menor": 8,
+      "comum": 1.93,
+      "maior": 2.39,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "TANGERINA PONCÃ",
+      "data": "2026-08-24",
+      "menor": 8,
+      "comum": 2.22,
+      "maior": 2.66,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "UVA ARRA 15",
+      "data": "2026-08-24",
+      "menor": 14.41,
+      "comum": 15.95,
+      "maior": 17.05,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "UVA ARRA CHERRY CRUSH",
+      "data": "2026-08-24",
+      "menor": 18.31,
+      "comum": 19.84,
+      "maior": 21.34,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "UVA BENITAKA",
+      "data": "2026-08-24",
+      "menor": 8.65,
+      "comum": 9.35,
+      "maior": 10,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "UVA CLARA SEM SEMENTE",
+      "data": "2026-08-24",
+      "menor": 11.99,
+      "comum": 13,
+      "maior": 13.99,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "UVA CRIMSON",
+      "data": "2026-08-24",
+      "menor": 10,
+      "comum": 10.2,
+      "maior": 10.4,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "UVA ISIS",
+      "data": "2026-08-24",
+      "menor": 10,
+      "comum": 10.94,
+      "maior": 11.86,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "UVA ITÁLIA",
+      "data": "2026-08-24",
+      "menor": 9.69,
+      "comum": 10.37,
+      "maior": 11.05,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "UVA MELODIA",
+      "data": "2026-08-24",
+      "menor": 11.5,
+      "comum": 13,
+      "maior": 14.5,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "UVA NIÁGARA",
+      "data": "2026-08-24",
+      "menor": 8.03,
+      "comum": 8.55,
+      "maior": 9.09,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "UVA PASSA IMP.",
+      "data": "2026-08-24",
+      "menor": 10.78,
+      "comum": 11.78,
+      "maior": 12.78,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "UVA PRETA COM SEMENTE",
+      "data": "2026-08-24",
+      "menor": 8.75,
+      "comum": 9,
+      "maior": 9.38,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "UVA RED GLOBE",
+      "data": "2026-08-24",
+      "menor": 16.07,
+      "comum": 17.22,
+      "maior": 18.39,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "UVA RED GLOBE IMP.",
+      "data": "2026-08-24",
+      "menor": 17.5,
+      "comum": 18.75,
+      "maior": 20,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "UVA RUBI",
+      "data": "2026-08-24",
+      "menor": 7.5,
+      "comum": 8.13,
+      "maior": 8.75,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "UVA THOMPSON",
+      "data": "2026-08-24",
+      "menor": 10.16,
+      "comum": 11.17,
+      "maior": 12.16,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "UVA VERMELHA SEM SEMENTE",
+      "data": "2026-08-24",
+      "menor": 10,
+      "comum": 12,
+      "maior": 14,
+      "categoria": "FRUTAS"
+    },
+    {
+      "produto": "UVA VITÓRIA",
+      "data": "2026-08-24",
+      "menor": 9.26,
+      "comum": 9.59,
+      "maior": 10.03,
+      "categoria": "FRUTAS"
     }
   ],
   "temps": {},
-  "atualizadoEm": "2026-08-25T11:15:57.753Z"
+  "atualizadoEm": "2026-08-25T11:16:24.108Z"
 }
